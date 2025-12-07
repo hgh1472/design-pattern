@@ -10,4 +10,10 @@ class TourPlan(
     var whereToStay: String? = null,
     var plans: List<DetailPlan>? = null,
 ) {
+    fun addPlan(day: Int, plan: String) {
+        if (plans == null) {
+            plans = mutableListOf()
+        }
+        (plans as MutableList).add(DetailPlan(day, plan))
+    }
 }
