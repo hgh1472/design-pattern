@@ -8,6 +8,6 @@ import adapter.after.security.UserDetails
 class AccountUserDetails(
     val account: Account,
 ) : UserDetails {
-    override val username = account.name
-    override val password = account.password
+    override var username = account.name
+    override var password = account.password
 }
